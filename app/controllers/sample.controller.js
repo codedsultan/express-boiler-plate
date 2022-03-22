@@ -3,7 +3,8 @@ const Sample = db.samples;
 // Create and Save a new sample
 exports.create = (req, res) => {
     // Validate request
-    if (req.body.title) {
+    // console.log(req);
+    if (!req.body.title) {
       res.status(400).send({ message: "Empty Content"});
       return;
     }
